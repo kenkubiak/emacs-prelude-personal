@@ -7,7 +7,7 @@
  '(custom-safe-themes
    '("1f6039038366e50129643d6a0dc67d1c34c70cdbe998e8c30dc4c6889ea7e3db" "2f08b4f5ff619bdfa46037553ea41f72f09013a2e6b7287799db6cec6a7dddb2" "78e6be576f4a526d212d5f9a8798e5706990216e9be10174e3f3b015b8662e27" "2dc03dfb67fbcb7d9c487522c29b7582da20766c9998aaad5e5b63b5c27eec3f" default))
  '(package-selected-packages
-   '(seti-theme monokai-theme melancholy-theme use-package frontside-javascript rjsx-mode prettier-js prettier tide projectile-speedbar speedbar yaml-mode web-mode lsp-ui lsp-mode json-mode js2-mode ts-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number nlinum move-text magit projectile imenu-anywhere hl-todo guru-mode git-modes git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring anzu ag ace-window)))
+   '(sr-speedbar seti-theme monokai-theme melancholy-theme use-package frontside-javascript rjsx-mode prettier-js prettier tide projectile-speedbar speedbar yaml-mode web-mode lsp-ui lsp-mode json-mode js2-mode ts-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number nlinum move-text magit projectile imenu-anywhere hl-todo guru-mode git-modes git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring anzu ag ace-window)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -47,7 +47,9 @@
 (load-theme 'seti t)
 
 ;; use speedbar in the same frame
-(global-set-key (kbd "s-|") 'sr-speedbar-toggle)
+(use-package sr-speedbar
+  :init (global-set-key (kbd "s-|") 'sr-speedbar-toggle)
+  )
 
 ;; Use font Input Mono
 
